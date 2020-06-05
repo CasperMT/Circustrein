@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caspe\\source\\repos\\Circustrein\\Circustrein\\Circustrein.csproj": {}
+    "C:\\Users\\caspe\\Documents\\GitHubSchool\\Circustrein\\Circustrein\\Circustrein\\Circustrein\\Circustrein.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caspe\\source\\repos\\Circustrein\\Circustrein\\Circustrein.csproj": {
+    "C:\\Users\\caspe\\Documents\\GitHubSchool\\Circustrein\\Circustrein\\Circustrein\\Circustrein\\Circustrein.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caspe\\source\\repos\\Circustrein\\Circustrein\\Circustrein.csproj",
+        "projectUniqueName": "C:\\Users\\caspe\\Documents\\GitHubSchool\\Circustrein\\Circustrein\\Circustrein\\Circustrein\\Circustrein.csproj",
         "projectName": "Circustrein",
-        "projectPath": "C:\\Users\\caspe\\source\\repos\\Circustrein\\Circustrein\\Circustrein.csproj",
+        "projectPath": "C:\\Users\\caspe\\Documents\\GitHubSchool\\Circustrein\\Circustrein\\Circustrein\\Circustrein\\Circustrein.csproj",
         "packagesPath": "C:\\Users\\caspe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caspe\\source\\repos\\Circustrein\\Circustrein\\obj\\",
+        "outputPath": "C:\\Users\\caspe\\Documents\\GitHubSchool\\Circustrein\\Circustrein\\Circustrein\\Circustrein\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

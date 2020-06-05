@@ -1,5 +1,7 @@
 using Circustrein;
+using Circustrein.Animals;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace CircustreinTests {
 
@@ -14,6 +16,15 @@ namespace CircustreinTests {
         }
 
         [TestMethod]
+        public void ConctructorAddsAnimal() {
+            Carnivore animal = AnimalCreator.CreateCarnivore(Sizes.Large);
+
+            wagon = new Wagon(animal);
+
+            Assert.IsTrue(wagon.Animals.Contains(animal));
+        }
+
+        [TestMethod]
         public void WagonIsCreated() {
             Wagon wagon = new Wagon();
 
@@ -22,33 +33,52 @@ namespace CircustreinTests {
 
         [TestMethod]
         public void CanAddAnimal() {
-            Animal animal = new Animal("Leeuw", true, Sizes.Large);
+            Carnivore animal = AnimalCreator.CreateCarnivore(Sizes.Large);
 
-            this.wagon.AddAnimal(animal);
+            wagon.AddAnimal(animal);
 
-            Assert.IsTrue(this.wagon.GetAnimals().Contains(animal));
+            Assert.IsTrue(wagon.Animals.Contains(animal));
         }
 
         [TestMethod]
-        public void NoSmallerPlantWithMeat() {
-            Animal animal = new Animal("Leeuw", true, Sizes.Large);
-            this.wagon.AddAnimal(animal);
+        public void NoSmallerHerbivoreWithCarnivore() {
+            wagon.AddAnimal(AnimalCreator.CreateCarnivore(Sizes.Large));
 
-            bool added = this.wagon.AddAnimal(new Animal("Giraffe", false, Sizes.Large));
+            Assert.IsFalse(wagon.AddAnimal(AnimalCreator.CreateHerbivore(Sizes.Middle)));
+        }
 
-            Assert.IsFalse(added);
+        [TestMethod]
+        public void NoCarnivoresTogether() {
+            wagon.AddAnimal(AnimalCreator.CreateCarnivore(Sizes.Large));
+
+            Assert.IsFalse(wagon.AddAnimal(AnimalCreator.CreateCarnivore(Sizes.Middle)));
+        }
+
+        [TestMethod]
+        public void CapacityLowers() {
+            int capacity = wagon.Capacity;
+
+            wagon.AddAnimal(AnimalCreator.CreateCarnivore(Sizes.Large));
+
+            Assert.IsTrue(wagon.Capacity < capacity);
         }
 
         [TestMethod]
         public void MaxCapacity() {
-            this.wagon.AddAnimal(new Animal("Giraffe", false, Sizes.Large));
-            this.wagon.AddAnimal(new Animal("Giraffe", false, Sizes.Large));
+            double capacity = (double)wagon.Capacity;
+            int amountOfAnimals = Convert.ToInt32(Math.Floor(capacity / (double)Sizes.Small));
 
-            bool added = this.wagon.AddAnimal(new Animal("Giraffe", false, Sizes.Large));
+            for (int i=0; i < amountOfAnimals; i++) {
+                wagon.AddAnimal(AnimalCreator.CreateHerbivore(Sizes.Small));
+            }
 
-            Assert.IsFalse(added);
+            Assert.IsFalse(wagon.AddAnimal(AnimalCreator.CreateHerbivore(Sizes.Small)));
         }
 
+        [TestMethod]
+        public void AddHandlerAddsAnimal() {
+            
+        }
 
     }
 }

@@ -1,71 +1,60 @@
-﻿using System;
+﻿using Circustrein.Animals;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Circustrein {
     public class Wagon {
-        List<Animal> animals;
-        Animal largestAnimal;
-
-        bool containsMeatEater;
-        private int points;
+        public List<IAnimal> Animals { get; set; } = new List<IAnimal>();
+        public int Capacity { get; set; }
+        private Carnivore CarnivoreInWagon;
 
         public Wagon() {
-            animals = new List<Animal>();
-            points = 0;
+            Capacity = 10;
         }
 
-        public Wagon(Animal animal) {
-            animals = new List<Animal>();
+        public Wagon(IAnimal animal) {
+            if (animal is Carnivore) {
+                CarnivoreInWagon = (Carnivore)animal;
+            }
+
             AddHandler(animal);
-
-            if (animal.EatsMeat && animal.Size == Sizes.Large) {
-                SetFull();
-            }
         }
-        
-        public List<Animal> GetAnimals() {
-            return this.animals;
-        }
+       
+        public bool AddAnimal(IAnimal animal) {
+            bool added = false;
 
-        public bool AddAnimal(Animal animal) {
-            if (((10-points) - animal.Size) >= 0) {
-                if (animal.EatsMeat) {
-                    if (!containsMeatEater) {
+            if (Capacity > (int)animal.Size) {
+                if (animal is Carnivore) {
+                    if (CarnivoreInWagon == null) {
                         AddHandler(animal);
-                        return true;
-                    } else {
-                        return false;
+                        added = true;
                     }
-                } else if (largestAnimal == null) {
-                    AddHandler(animal);
-                    return true;
-                } else if ((int)animal.Size > (int)largestAnimal.Size) {
-                    AddHandler(animal);
-                    return true;
                 } else {
-                    return false;
-                }    
-            } else {
-                return false;
+                    if (CarnivoreInWagon == null) {
+                        AddHandler(animal);
+                        added = true;
+                    } else {
+                        if (animal.Size > CarnivoreInWagon.Size) {
+                            AddHandler(animal);
+                            added = true;
+                        }
+                    }
+                    
+                }
             }
-            
+
+            return added;
         }
 
-        private void AddHandler(Animal animal) {
-            if (animal.EatsMeat) {
-                containsMeatEater = true;
-                largestAnimal = animal;
+        private void AddHandler(IAnimal animal) {
+            if (animal is Carnivore) {
+                CarnivoreInWagon = (Carnivore)animal;
             }
 
-            this.animals.Add(animal);
-            points += (int)animal.Size;
+            Animals.Add(animal);
+            Capacity -= (int)animal.Size;
         }
-
-        private void SetFull() {
-            points = 10;
-        }
-
     
     }
 }

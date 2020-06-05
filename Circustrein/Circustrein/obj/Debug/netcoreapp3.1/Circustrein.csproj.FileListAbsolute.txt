@@ -11,3 +11,16 @@ C:\Users\caspe\source\repos\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circ
 C:\Users\caspe\source\repos\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.pdb
 C:\Users\caspe\source\repos\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.csproj.CoreCompileInputs.cache
 C:\Users\caspe\source\repos\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.genruntimeconfig.cache
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.exe
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.deps.json
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.runtimeconfig.json
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.runtimeconfig.dev.json
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.dll
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.pdb
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.csprojAssemblyReference.cache
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.csproj.CoreCompileInputs.cache
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.AssemblyInfoInputs.cache
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.AssemblyInfo.cs
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.dll
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.pdb
+C:\Users\caspe\Documents\GitHubSchool\Circustrein\Circustrein\Circustrein\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.genruntimeconfig.cache
