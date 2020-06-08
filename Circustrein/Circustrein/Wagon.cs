@@ -5,15 +5,17 @@ using System.Text;
 
 namespace Circustrein {
     public class Wagon {
-        public List<IAnimal> Animals { get; set; } = new List<IAnimal>();
-        public int Capacity { get; set; }
+        public List<IAnimal> Animals { get; set; }
+        public int Capacity { get; set; } = 10;
         private Carnivore CarnivoreInWagon;
 
         public Wagon() {
-            Capacity = 10;
+            Animals = new List<IAnimal>();
         }
 
         public Wagon(IAnimal animal) {
+            Animals = new List<IAnimal>();
+
             if (animal is Carnivore) {
                 CarnivoreInWagon = (Carnivore)animal;
             }

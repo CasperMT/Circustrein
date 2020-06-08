@@ -16,6 +16,13 @@ namespace CircustreinTests {
         }
 
         [TestMethod]
+        public void IsAnimalListCreated() {
+            wagon = new Wagon();
+
+            Assert.IsNotNull(wagon.Animals);
+        }
+
+        [TestMethod]
         public void ConctructorAddsAnimal() {
             Carnivore animal = AnimalCreator.CreateCarnivore(Sizes.Large);
 

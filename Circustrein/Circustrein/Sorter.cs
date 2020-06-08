@@ -8,10 +8,11 @@ namespace Circustrein {
     public class Sorter {
 
         public List<IAnimal> Animals { get; private set; } = new List<IAnimal>();
-        public List<Wagon> wagons { get; private set; } = new List<Wagon>();
+        public List<Wagon> wagons { get; private set; }
 
 
         public Sorter(List<IAnimal> animals) {
+            wagons = new List<Wagon>();
             this.Animals = animals;
         }
 
@@ -37,48 +38,6 @@ namespace Circustrein {
                 }
             }
         }
-
-        /*private void MiddleCarnivore(List<IAnimal> animals) {
-            foreach (IAnimal a in animals) {
-                if(this.wagons[this.wagons.Count - 1].AddAnimal(a)) {
-                    
-                } else {
-                    this.wagons.Add(new Wagon(a));
-                }
-            }
-        }
-
-        private void SmallCarnivore(List<IAnimal> animals) {
-            foreach (IAnimal a in animals) {
-                if (!CheckIfSpace(a)) {
-                    this.wagons.Add(new Wagon(a));
-                }
-            }
-        }
-
-        private void LargeHerbivore(List<IAnimal> animals) {
-            foreach (IAnimal a in animals) {
-                if (!CheckIfSpace(a)) {
-                    this.wagons.Add(new Wagon(a));
-                }
-            }
-        }
-
-        private void MiddleHerbivore(List<IAnimal> animals) {
-            foreach (IAnimal a in animals) {
-                if (!CheckIfSpace(a)) {
-                    this.wagons.Add(new Wagon(a));
-                }
-            }
-        }
-
-        private void SmallHerbivore(List<IAnimal> animals) {
-            foreach (IAnimal a in animals) {
-                if (!CheckIfSpace(a)) {
-                    this.wagons.Add(new Wagon(a));
-                }
-            }
-        }*/
 
         private bool CheckIfSpace(IAnimal animal) {
             bool space = false;
