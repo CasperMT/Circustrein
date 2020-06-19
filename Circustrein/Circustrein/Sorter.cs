@@ -22,11 +22,11 @@ namespace Circustrein {
                 this.wagons.Add(new Wagon(animal));
             }
 
-            SortAnimalList((from animal in Animals where animal is Carnivore && animal.Size == Sizes.Middle select animal).ToList());
-            SortAnimalList((from animal in Animals where animal is Carnivore && animal.Size == Sizes.Small select animal).ToList());
-            SortAnimalList((from animal in Animals where animal is Herbivore && animal.Size == Sizes.Large select animal).ToList());
-            SortAnimalList((from animal in Animals where animal is Herbivore && animal.Size == Sizes.Middle select animal).ToList());
-            SortAnimalList((from animal in Animals where animal is Herbivore && animal.Size == Sizes.Small select animal).ToList());
+            SortAnimalList(Animals.Where(a => a.Size == Sizes.Middle && a is Carnivore).ToList());
+            SortAnimalList(Animals.Where(a => a.Size == Sizes.Small && a is Carnivore).ToList());
+            SortAnimalList(Animals.Where(a => a.Size == Sizes.Large && a is Herbivore).ToList());
+            SortAnimalList(Animals.Where(a => a.Size == Sizes.Middle && a is Herbivore).ToList());
+            SortAnimalList(Animals.Where(a => a.Size == Sizes.Small && a is Herbivore).ToList());
 
             return wagons;
         }

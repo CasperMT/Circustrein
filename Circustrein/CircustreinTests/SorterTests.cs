@@ -66,5 +66,6 @@ namespace CircustreinTests {
             Assert.IsTrue(wagons[2].Animals[1] is Herbivore);
             Assert.AreEqual(wagons[2].Animals[1].Size, Sizes.Middle);
         }
+
     }
 }
